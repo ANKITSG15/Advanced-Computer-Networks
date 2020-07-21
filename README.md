@@ -48,5 +48,30 @@ iii) Create a readme file (readme.txt) which contains key implementation details
 limitations of your implementation.
 
 
+*****************************************************************************************************************************************
+Implementation details Submitted -
+
+1. We have to put the all the mentioned command line arguement in the given order :- 
+a) Server_IP_Addres b) Server_Port_Address c) File_Name d) Packet_size(in bytes) e) Window Size
+
+2. Input file (File_Name) must be in the same folder where the source code(client.c) is present.
+
+3. Server port address(8888) is harded coded using #define. 
+
+4. Server buffer(5000bytes) is also hard coded using #define.
+
+5. Assuming Packet size = Payload.
+
+6. Packetisation:- Packet is structured in the following manner:- 
+				   SeqNo|PktSize|IsLast|PktType|Payload(Data)
+whereas Seqence Number field is 4 bytes long, Packet Size field is 4 bytes long, IsLast field is 2 bytes long(1 byte for delimiter),
+Packet Type field is 2 bytes long(1 byte ford delimiter), Payload field is as per the input packet size and 2 bytes long is delimiter.
+
+7. Both sequence number and Packet size can not be more than 9999 bytes.
+
+8. Output file(output.txt) is the file where the data is written must be placed along with server.c code.  
+
+
+
 
 
